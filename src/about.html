@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                accent: {"50":"#fff5f0","100":"#ffd6c2","200":"#feb795","300":"#fe9868","400":"#fd783c","500":"#fb580f","600":"#db4603","700":"#b03802","800":"#862b01","900":"#5a1d00","950":"#2f0f00"}
+            }
+            }
+        }
+        }
+    </script>
+</head>
+<body>
+    <div i>
+        <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
+            <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
+                <nav class="w-full flex flex-row items-center font-sans">
+                    <a class="text-gray-50" href="/">
+                        <img src="./logo.png" class="w-20 h-auto" alt="">
+                        <!-- <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
+                            <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
+                            <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
+                            <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
+                            <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
+                            <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
+                        </svg> -->
+                    </a>
+                    <div class="flex-1 relative hidden md:flex items-center justify-center">
+                        <ul class="mx-auto inline-flex gap-6 text-sm font-light">
+                            <li>
+                                <a class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1" href="./index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">About</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="absolute right-0">
+                            <li class="relative">
+                                <a class=" rounded-lg flex items-center justify-center text-lg font-semibold text-green-700 bg-white leading-none px-12 py-4 uppercase" href="">Donate</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="sm:h-dvh h-[20rem] sm:w-dvw max-h-[30rem] relative pb-10">
+            <div class="absolute inset-0 z-[1]">
+                <img class="h-full w-full object-cover object-center brightness-50" src="./background.jpeg" alt="">
+            </div>
+            <div class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
+                <div class="h-full w-full flex flex-col relative space-y-6">
+                    <div class="mt-auto mb-0 text-gray-50 md:pb-36 space-y-6">
+                        <h1 class="text-4xl md:text-8xl max-w-[60rem] font-bold">About us</h1>
+                        <!-- <div class="md:flex-row flex-col flex gap-4">
+                            <button class="inline-block text-base font-medium px-12 py-4 text-black bg-green-500 rounded-lg cursor-pointer">Donate</button>
+                        </div> -->
+                    </div>
+                    <div class="md:absolute md:right-0 md:bottom-32 text-gray-50 my-16">
+                        <ul class="flex md:flex-col items-center justify-center gap-2">
+                            <li class="h-6 w-6 block rounded-full bg-accent-400 text-gray-50">
+                                <a href="" class="block h-full w-full p-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-current " viewBox="0 0 24 24">
+                                        <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <path d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor" d="M18 2a1 1 0 0 1 .993.883L19 3v4a1 1 0 0 1-.883.993L18 8h-3v1h3a1 1 0 0 1 .991 1.131l-.02.112l-1 4a1 1 0 0 1-.858.75L17 15h-2v6a1 1 0 0 1-.883.993L14 22h-4a1 1 0 0 1-.993-.883L9 21v-6H7a1 1 0 0 1-.993-.883L6 14v-4a1 1 0 0 1 .883-.993L7 9h2V8a6 6 0 0 1 5.775-5.996L15 2z"></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="h-6 w-6 block rounded-full bg-accent-400 text-gray-50">
+                                <a href="" class="h-full w-full block p-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-full h-full fill-current ">
+                                        <path d="M256.283 47.553c70.693 0 128 54.682 118 128.931-2.072 15.388-3.422 31.483-4.26 44.759 0 0 2.402 4.253 12.664 4.253 6.071 0 14.895-1.543 27.596-6.354 2.236-.847 4.377-1.241 6.377-1.241 7.918 0 13.615 5.931 14.123 12.271.426 5.31-4.564 11.199-8.371 13.009-13.766 6.542-46.991 10.063-46.991 32.638 0 22.576 22.362 46.656 40.862 63.713S480 360.602 480 360.602s.283 21.57-31.717 29.097c-32 7.524-32.1 5.712-33.25 13.796-2.133 14.979-1.535 21.378-11.248 21.378-1.672 0-3.651-.19-6.002-.558-8.23-1.291-19.239-3.644-31.121-3.644-11.216 0-23.21 2.097-34.379 9.161-23 14.549-41.283 34.114-76.283 34.114s-53-19.565-76-34.114c-11.17-7.065-23.162-9.161-34.379-9.161-11.88 0-22.892 2.353-31.121 3.644-2.352.367-4.33.558-6.002.558-9.71 0-9.115-6.399-11.248-21.378-1.151-8.084-1.25-6.27-33.25-13.795s-32-29.097-32-29.097 45.5-4.012 64-21.068c18.5-17.058 40.862-41.134 40.862-63.71 0-22.575-33.226-26.09-46.991-32.632-3.807-1.81-8.796-7.687-8.371-12.997.507-6.336 6.196-12.251 14.107-12.25 2.004 0 4.152.38 6.393 1.229 12.749 4.829 21.588 6.342 27.662 6.342 10.204 0 12.598-4.273 12.598-4.273-.837-13.275-2.187-29.371-4.259-44.759-10-74.249 47.307-128.931 118-128.931M256.283 32H256c-41.093 0-79.215 16.208-104.591 45.341-23.982 27.534-34.375 63.345-29.265 101.292 1.416 10.51 2.46 21.231 3.21 30.618-3.97-.559-9.686-1.998-17.703-5.034-3.965-1.502-8.017-2.295-12.043-2.295-15.641-.001-28.844 11.852-30.057 27.003-1.027 12.818 8.235 24.393 17.47 28.783 4.251 2.02 9.181 3.578 14.4 5.232 6.707 2.125 14.309 4.532 19.293 7.703 4.147 2.639 4.147 4.168 4.147 5.182 0 8.66-6.191 24.691-35.688 51.888-10.499 9.681-39.055 15.501-54.588 16.897l-14.572 1.311L16 360.603c0 1.679.312 10.546 6.485 20.319 5.246 8.306 16.073 19.283 37.863 24.407a1139.713 1139.713 0 0 0 15.208 3.454c2.306.512 4.555 1.01 6.454 1.453l.081.623c.9 7.004 1.611 12.535 4.392 17.75 2.453 4.6 8.574 12.316 22.015 12.316 2.478 0 5.249-.246 8.472-.751 1.672-.263 3.386-.554 5.2-.863 7.116-1.212 15.182-2.587 23.451-2.587 10.277 0 18.732 2.188 25.846 6.688 4.531 2.867 8.892 5.972 13.509 9.26C202.967 465.481 223.358 480 256 480c32.726 0 53.293-14.582 71.439-27.446 4.576-3.244 8.898-6.309 13.377-9.142 7.113-4.5 15.568-6.688 25.846-6.688 8.27 0 16.334 1.375 23.449 2.586 1.814.311 3.529.602 5.202.864 3.223.505 5.993.751 8.472.751 13.44 0 19.562-7.715 22.015-12.313 2.781-5.214 3.492-10.746 4.392-17.749l.082-.629c1.898-.441 4.148-.941 6.455-1.452 4.023-.892 9.029-2.001 15.206-3.454 21.851-5.139 32.611-16.17 37.79-24.518 6.098-9.828 6.296-18.736 6.273-20.422l-.189-14.501-14.398-1.278c-15.413-1.396-43.8-7.219-54.301-16.9-16.281-15.011-35.688-36.199-35.688-51.893 0-1.014 0-2.546 4.15-5.186 4.985-3.174 12.589-5.584 19.297-7.71 5.217-1.654 10.144-3.217 14.394-5.236 9.236-4.39 18.498-15.978 17.471-28.807-1.215-15.166-14.424-27.046-30.072-27.046-4.021 0-8.068.76-12.027 2.259-8.027 3.041-13.743 4.41-17.705 4.962.747-9.319 1.791-20.12 3.211-30.67 5.111-37.948-5.281-73.509-29.264-101.042C335.498 48.208 297.376 32 256.283 32z" fill="currentColor"></path>
+                                        <path d="M256 229c-20.838 0-40.604-8.29-55.657-23.343a8 8 0 1 1 11.313-11.313C223.688 206.374 239.436 213 256 213c16.387 0 32.15-6.64 44.385-18.698a8 8 0 0 1 11.23 11.395C296.368 220.725 276.617 229 256 229z" fill="currentColor"></path>
+                                        <ellipse cx="208" cy="152" rx="16" ry="24" fill="currentColor"></ellipse>
+                                        <ellipse cx="304" cy="152" rx="16" ry="24" fill="currentColor"></ellipse>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="h-6 w-6 block rounded-full bg-accent-400 text-gray-50 p-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full fill-none stroke-current " viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" fill="none"></line>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="h-dvh w-dvw max-h-[30rem] relative">
+            <div class="max-w-[120rem] mx-auto h-full relative z-[2] px-6 md:px-8 lg:px-10">
+                <div class="h-full w-full flex flex-col relative">
+                    <div class="mt-24 mb-0 space-y-6">
+                        <h1 class="text-3xl md:text-6xl max-w-[60rem] font-bold">Our approach</h1>
+                        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0">
+
+                            <div class="p-4 md:w-1/3 flex">
+                              <div class="flex-grow pl-6">
+                                <div class="text-green-600 font-semibold mb-6">
+                                    <h2>OUR MISSION</h2>
+                                </div>
+                                <p class="leading-relaxed text-lg text-gray-700 max-w-lg">
+                                    To unlock Ghanaian potentials through quality foundational literacy and numeracy skills.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="p-4 md:w-1/3 flex">
+                                <div class="flex-grow pl-6">
+                                    <div class="text-green-600 font-semibold mb-6">
+                                        <h2>OUR VISION</h2>
+                                    </div>
+                                  <p class="leading-relaxed text-lg text-gray-700 max-w-lg">
+                                    A Ghana where every learner, regardless of background, achieves mastery in foundational literacy and numeracy by grade 5.
+                                  </p>
+                                </div>
+                            </div>
+
+                            <div class="p-4 md:w-1/3 flex">
+                                <div class="flex-grow pl-6">
+                                  <div class="text-green-600 font-semibold mb-6">
+                                      <h2>OUR TARGET</h2>
+                                  </div>
+                                  <p class="leading-relaxed text-lg text-gray-700 max-w-lg">
+                                    We are are starting our pilot with a target of 500 grade 3 to 5 learners in different basic schools
+                                    spanning over 3 months.
+                                  </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bg-white">
+            <div class="mx-auto py-24 sm:px-6 sm:py-8 lg:px-8">
+              <div class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                <svg viewBox="0 0 1024 1024" class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
+                  <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
+                  <defs>
+                    <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                      <stop stop-color="#7775D6" />
+                      <stop offset="1" stop-color="#E935C1" />
+                    </radialGradient>
+                  </defs>
+                </svg>
+                <div class="mx-auto text-center lg:flex-auto py-16 lg:py-32">
+                  <h2 class="text-xl font-bold tracking-tight text-white sm:text-2xl">GIVE US A HAND</h2>
+                  <p class="mt-6 text-4xl  sm:text-6xl font-bold text-gray-300">
+                    Support us and Change the course of a child's life today!
+                  </p>
+                  <div class="mt-10 items-center justify-center gap-x-6">
+                    <a href="#" class="rounded-md bg-white px-3.5 py-4 text-2xl font-semibold text-green-700 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                        Educate a Child
+                    </a>
+                    <!-- <a href="#" class="text-sm font-semibold leading-6 text-white">Learn more <span aria-hidden="true">→</span></a> -->
+                  </div>
+                </div>
+                <!-- <div class="relative mt-16 h-80 lg:mt-8">
+                  <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10" src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" width="1824" height="1080">
+                </div> -->
+              </div>
+            </div>
+        </div>
+
+        <footer class="bg-black text-white">
+            <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <div>
+                <img src="./logo.png" class="mr-5 h-6 sm:h-24" alt="logo" />
+                <div class="flex mt-8 space-x-6 text-gray-600">
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                    <span class="sr-only"> Facebook </span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                    </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                    <span class="sr-only"> Instagram </span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
+                    </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                    <span class="sr-only"> Twitter </span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                    <span class="sr-only"> GitHub </span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+                    </svg>
+                    </a>
+                    <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+                    <span class="sr-only"> Dribbble </span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clipRule="evenodd" />
+                    </svg>
+                    </a>
+                </div>
+                </div>
+                <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                    <p class="font-medium">
+                    Company
+                    </p>
+                    <nav class="flex flex-col mt-4 space-y-2 text-sm text-green-500">
+                    <a class="hover:opacity-75" href> About </a>
+                    <a class="hover:opacity-75" href> Programs</a>
+                    <a class="hover:opacity-75" href> Contact </a>
+                    </nav>
+                </div>
+                </div>
+            </div>
+            <p class="mt-8 text-xs text-gray-800">
+                © 2022 Comany Name
+            </p>
+            </div>
+        </footer>
+
+
+    </div>
+</body>
+</html>
